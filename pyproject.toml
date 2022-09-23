@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "akkietradebot"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.13.0"
+schedule = "^1.1.0"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+black = "^22.8.0"
+mypy = "^0.971"
+flake8 = "^5.0.4"
+pyproject-flake8 = "^5.0.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 120
+max-complexity = 18
+ignore = "E203,E266,W503,"
+per-file-ignores = "__init__.py:F401"
+exclude = ".venv"
+
+[tool.isort]
+profile = "black"
